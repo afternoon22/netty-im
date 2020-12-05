@@ -22,11 +22,11 @@ public class ImClientApp {
 		MessageProto.Message message = MessageProto.Message.newBuilder().setId(id).setContent("hello yinjihuan").build();
 		channel.writeAndFlush(message);
 		//对象传输数据
-		/*Message message = new Message();
-		message.setId(id);
-		message.setContent("hello yinjihuan");
-		channel.writeAndFlush(message);*/
+		Message message1 = new Message();
+		message1.setId(id);
+		message1.setContent("hello yinjihuan");
+		channel.writeAndFlush(message1);
 		//字符串传输数据
-		//channel.writeAndFlush("yinjihuan");
+		channel.writeAndFlush("yinjihuan");
 	}
 }
